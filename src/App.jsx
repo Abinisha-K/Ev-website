@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react"
 
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+
 import  Background  from "./Components/Background/Background";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
@@ -22,7 +24,23 @@ import Hero from "./Components/Hero/Hero";
     },3000);
   },[])
   return (
+
+
+    
     <div>
+
+        <Router>
+            <Switch>
+                <Route path="/" exact component={Background} />
+                <Route path="/navbar" component={Navbar} />
+                <Route path="/hero" Component={Hero} />
+            </Switch>
+        </Router>
+
+
+
+
+
       <Background playStatus={playStatus} heroCount={heroCount}/>
       <Navbar/>
       <Hero
@@ -32,6 +50,8 @@ import Hero from "./Components/Hero/Hero";
       setHeroCount={setHeroCount}
       playStatus={playStatus}
       />
+
+
     </div>
   )
 }
