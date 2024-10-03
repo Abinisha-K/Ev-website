@@ -1,9 +1,5 @@
 
-
 import { useEffect, useState } from "react"
-
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-
 import  Background  from "./Components/Background/Background";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
@@ -38,20 +34,7 @@ import Hero from "./Components/Hero/Hero";
       setHeroCount={setHeroCount}
       playStatus={playStatus}
       />
-     
-
-
-     <Router>
-            <Routes>
-                <Route path="/" element={<Background />} />
-                <Route path="/navbar" element={<Navbar />} />
-                <Route path="/hero" element={<Hero />} />
-                {/* Add other routes here */}
-            </Routes>
-        </Router>
-
-
-    </div>
+         </div>
   )
 }
 
