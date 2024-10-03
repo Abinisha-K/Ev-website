@@ -29,19 +29,6 @@ import Hero from "./Components/Hero/Hero";
     
     <div>
 
-        <Router>
-            <Routes>
-                <Route path="/" element={<Background />} />
-                <Route path="/navbar" element={<Navbar />} />
-                <Route path="/hero" element={<Hero />} />
-                {/* Add other routes here */}
-            </Routes>
-        </Router>
-
-
-
-
-
       <Background playStatus={playStatus} heroCount={heroCount}/>
       <Navbar/>
       <Hero
@@ -51,6 +38,17 @@ import Hero from "./Components/Hero/Hero";
       setHeroCount={setHeroCount}
       playStatus={playStatus}
       />
+     
+
+
+     <Router>
+            <Routes>
+                <Route path="/" element={<Background />} />
+                <Route path="/navbar" element={<Navbar />} />
+                <Route path="/hero" element={<Hero />} />
+                {/* Add other routes here */}
+            </Routes>
+        </Router>
 
 
     </div>
